@@ -4,6 +4,7 @@ Este projeto tem o intuito de demonstrar o uso do HangFire para o agendamento de
 Para rodar o projeto é necessário criar um banco no SQL Server de forma que o Hangfire utilize-o para criar a estrutura de tabela necessária, para isso rodar o script a seguir:
 
 ####################################################################
+
 CREATE LOGIN [HangFireUser] WITH PASSWORD = 'Us3rP@ssw0rd'
 GO
 

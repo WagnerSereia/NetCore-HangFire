@@ -27,13 +27,16 @@ GO
 
 GRANT CREATE TABLE TO [HangFireUser]
 GO
+
 ####################################################################
 
 
 Após rodar o script, o projeto está apto a ser restaurado e rodar para agendar as tarefas através dos endpoints disponíbilizados através da api.
 
 link de teste da api pelo swagger
+
 https://localhost:5003/swagger/index.html
 
 link da dashboard do Hangfire
+
 https://localhost:5003/hangfire

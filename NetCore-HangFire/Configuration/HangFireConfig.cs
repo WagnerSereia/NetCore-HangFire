@@ -12,7 +12,7 @@ namespace NetCore_HangFire.Configuration
     public static class HangFireConfig
     {
         public static IServiceCollection AddHangFireConfiguration(this IServiceCollection services,IConfiguration configuration)
-        {          
+        {            
             services.AddHangfire(config => config
             .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
             .UseSimpleAssemblyNameTypeSerializer()

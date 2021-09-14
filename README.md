@@ -6,26 +6,35 @@ Para rodar o projeto é necessário criar um banco no SQL Server de forma que o 
 ####################################################################
 
 CREATE LOGIN [HangFireUser] WITH PASSWORD = 'Us3rP@ssw0rd'
+
 GO
 
 CREATE DATABASE HangFireDB
+
 GO
 
 use [HangFireDB]
+
 CREATE USER [HangFireUser] 
+
 FOR LOGIN [HangFireUser]
+
 WITH DEFAULT_SCHEMA = dbo; 
+
 GO  
  
 EXEC sp_change_users_login 'Update_One', 'HangFireUser', 'HangFireUser';
 
 IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE [name] = 'HangFire') EXEC ('CREATE SCHEMA [HangFire]')
+
 GO
 
 ALTER AUTHORIZATION ON SCHEMA::[HangFire] TO [HangFireUser]
+
 GO
 
 GRANT CREATE TABLE TO [HangFireUser]
+
 GO
 
 ####################################################################
